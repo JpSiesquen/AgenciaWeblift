@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WEBLIFT Studio — Agencia peruana de diseño y desarrollo web. Páginas web y landing pages con hosting incluido."
+    />
+    <title>WEBLIFT Studio — Diseño y Desarrollo Web en Perú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <link rel="stylesheet" href="../assets/css/sections.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav id="navbar">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo.png" alt="WEBLIFT" class="logo-img" />
+        WEB<span>LIFT</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+        <li><a href="#pricing">Precios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <div class="nav-auth">
+          <li>
+            <a href="login.html" class="nav-btn-login" id="navLogin"
+              >Ingresar</a
+            >
+          </li>
+          <li>
+            <a href="register.html" class="nav-btn-cta" id="navRegister"
+              >COTIZAR GRATIS</a
+            >
+          </li>
+          <li style="position: relative">
+            <div class="nav-user" id="navUser" style="display: none">
+              <div class="nav-user-avatar" id="navAvatar">U</div>
+              <span class="nav-user-name" id="navUserName">Mi cuenta</span>
+            </div>
+            <div class="nav-user-dropdown" id="navDropdown">
+              <div class="dropdown-user-info">
+                <span class="d-name" id="dropdownName">Mi cuenta</span>
+                <span class="d-email" id="dropdownEmail"></span>
+              </div>
+              <a href="contact.html">📋 Solicitar cotización</a>
+              <div class="dropdown-divider"></div>
+              <button class="logout-btn" id="navLogout">
+                🚪 Cerrar sesión
+              </button>
+            </div>
+          </li>
+        </div>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-tag">Agencia Digital en Perú</div>
+          <h1>Elevamos tu negocio al mundo <em>digital</em></h1>
+          <p class="hero-desc">
+            Diseñamos y desarrollamos páginas web y landing pages de alta
+            conversión, con hosting gestionado incluido. Tú enfócate en tu
+            negocio, nosotros nos encargamos de todo lo técnico.
+          </p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn-primary">
+              Quiero mi web ahora
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#portfolio" class="btn-secondary">Ver portafolio →</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div style="position: relative">
+            <div
+              class="float-badge"
+              style="
+                position: absolute;
+                top: -20px;
+                right: -20px;
+                animation: float 3s ease-in-out infinite;
+              "
+            >
+              <span>⚡</span>
+              <div>
+                <strong>Entrega rápida</strong><span>7–20 días hábiles</span>
+              </div>
+            </div>
+            <div
+              class="float-badge"
+              style="
+                position: absolute;
+                bottom: 30px;
+                left: -30px;
+                animation: float 3s ease-in-out 1.5s infinite;
+              "
+            >
+              <span>🔒</span>
+              <div>
+                <strong>SSL incluido</strong><span>Seguridad garantizada</span>
+              </div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <span class="card-url">weblift.studio</span>
+              </div>
+              <div class="hero-card-body">
+                <div class="code-line">
+                  <span class="cm">// Proyecto: Clínica Dental Lima</span>
+                </div>
+                <div class="code-line">
+                  <span class="kw">const</span> web =
+                  <span class="fn">WebLift</span>.<span class="fn">build</span
+                  >({
+                </div>
+                <div class="code-line">
+                  &nbsp;&nbsp;tipo: <span class="str">"landing-page"</span>,
+                </div>
+                <div class="code-line">
+                  &nbsp;&nbsp;hosting: <span class="str">"incluido"</span>,
+                </div>
+                <div class="code-line">
+                  &nbsp;&nbsp;ssl: <span class="kw">true</span>,
+                </div>
+                <div class="code-line">
+                  &nbsp;&nbsp;conversion: <span class="str">"optimizada"</span>
+                </div>
+                <div class="code-line">});</div>
+                <div class="code-line" style="margin-top: 8px">
+                  <span class="cm">// ✓ Entregado en 8 días</span>
+                </div>
+              </div>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <strong>99.9%</strong><span>Uptime</span>
+                </div>
+                <div class="hero-stat">
+                  <strong>&lt;2s</strong><span>Carga</span>
+                </div>
+                <div class="hero-stat">
+                  <strong>+30</strong><span>Proyectos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══════════ WHATSAPP ═══════════ -->
+    <a
+      href="https://wa.me/51912791400?text=Me%20gustaría%20cotizar%20el%20precio%20de%20una%20landing%20page%20con%20hosting%20incluido."
+      class="whatsapp"
+      target="_blank"
+    >
+      <i class="fa fa-whatsapp whatsapp-icon"></i
+    ></a>
+
+    <!-- ═══════════ TECNOLOGÍAS ═══════════ -->
+    <div id="logos">
+      <div class="logos-inner">
+        <span class="logos-label">Tecnologías que usamos</span>
+        <div class="logos-list">
+          <span>WordPress</span><span>Elementor</span><span>HTML/CSS</span>
+          <span>JavaScript</span><span>Figma</span><span>Google Analytics</span
+          ><span>Cloudflare</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ NOSOTROS ═══════════ -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal" style="position: relative">
+            <div class="about-img-main">
+              <div class="about-mockup">
+                <div class="mockup-bar">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-line accent w-half"></div>
+                  <div class="mockup-line w-full"></div>
+                  <div class="mockup-line w-three"></div>
+                  <div class="mockup-row">
+                    <div class="mockup-block"></div>
+                    <div class="mockup-block"></div>
+                    <div class="mockup-block"></div>
+                  </div>
+                  <div class="mockup-line w-full"></div>
+                  <div class="mockup-line w-three"></div>
+                  <div class="mockup-line w-half"></div>
+                </div>
+              </div>
+              <div class="about-icons-row">
+                <div class="about-icon-box accent-box">🎨</div>
+                <div class="about-icon-box">⚡</div>
+                <div class="about-icon-box">🔒</div>
+              </div>
+            </div>
+            <div class="about-stat-pill pill-bottom">
+              <span class="pill-num">100%</span>
+              <span class="pill-label">Entrega puntual</span>
+            </div>
+            <div class="about-stat-pill pill-top">
+              <span class="pill-num">1 año</span>
+              <span class="pill-label">Hosting incluido</span>
+            </div>
+          </div>
+          <div class="about-content reveal reveal-delay-2">
+            <div class="section-tag">Quiénes Somos</div>
+            <h2>Una agencia digital que hace el trabajo completo</h2>
+            <p>
+              Somos <strong>WEBLIFT Studio</strong>, una agencia peruana
+              especializada en crear presencias digitales que realmente venden.
+              Nuestro modelo <strong>"llave en mano"</strong> incluye diseño,
+              desarrollo y hosting — un solo proveedor para todo.
+            </p>
+            <p>
+              No solo hacemos páginas bonitas, construimos herramientas de
+              ventas. Cada proyecto está optimizado para velocidad, seguridad y
+              conversión.
+            </p>
+            <div class="about-values">
+              <div class="about-value">
+                <div class="value-icon">🎯</div>
+                <div class="value-text">
+                  <strong>Enfoque en conversión</strong>
+                  <span
+                    >Cada elemento está diseñado para convertir visitantes en
+                    clientes.</span
+                  >
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="value-icon">🚀</div>
+                <div class="value-text">
+                  <strong>Entrega rápida y puntual</strong>
+                  <span
+                    >Landing pages en 7 días, webs corporativas en 20.
+                    Siempre.</span
+                  >
+                </div>
+              </div>
+              <div class="about-value">
+                <div class="value-icon">🤝</div>
+                <div class="value-text">
+                  <strong>Soporte en español</strong>
+                  <span
+                    >Tu equipo técnico de confianza, siempre disponible.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVICIOS ═══════════ -->
+    <section id="services">
+      <div class="container">
+        <div class="services-header reveal">
+          <div class="section-tag">Nuestros Servicios</div>
+          <h2>Todo lo que necesitas para estar en internet</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon">🖥️</div>
+            <h3>Página Web Corporativa</h3>
+            <p>
+              Presencia digital profesional completa. Ideal para empresas que
+              quieren credibilidad y ser encontradas en Google.
+            </p>
+            <ul class="service-includes">
+              <li>
+                <span class="check">✓</span> Hasta 6 secciones personalizadas
+              </li>
+              <li><span class="check">✓</span> Diseño adaptado a tu marca</li>
+              <li><span class="check">✓</span> Mobile y desktop</li>
+              <li><span class="check">✓</span> SEO básico incluido</li>
+              <li><span class="check">✓</span> Hosting gestionado 1 año</li>
+              <li><span class="check">✓</span> SSL + dominio incluido</li>
+            </ul>
+            <a href="#contact" class="service-btn">Cotizar este servicio →</a>
+          </div>
+          <div class="service-card featured reveal reveal-delay-2">
+            <div class="service-badge">⭐ Más popular</div>
+            <div class="service-icon">⚡</div>
+            <h3>Landing Page de Alta Conversión</h3>
+            <p>
+              Una página con un solo objetivo: que el visitante actúe. Perfecta
+              para Google Ads, Instagram y TikTok.
+            </p>
+            <ul class="service-includes">
+              <li>
+                <span class="check">✓</span> Estructura psicológica de venta
+              </li>
+              <li><span class="check">✓</span> Velocidad &lt;2 segundos</li>
+              <li><span class="check">✓</span> Formulario o botón WhatsApp</li>
+              <li><span class="check">✓</span> Google Analytics incluido</li>
+              <li><span class="check">✓</span> Hosting gestionado 1 año</li>
+              <li><span class="check">✓</span> SSL + dominio incluido</li>
+            </ul>
+            <a href="#contact" class="service-btn">Cotizar este servicio →</a>
+          </div>
+          <div class="service-card reveal reveal-delay-3">
+            <div class="service-icon">🔧</div>
+            <h3>Mantenimiento y Soporte</h3>
+            <p>
+              Tu web siempre actualizada, segura y al 100%. Nos ocupamos de todo
+              lo técnico para que tú no tengas que hacerlo.
+            </p>
+            <ul class="service-includes">
+              <li><span class="check">✓</span> Renovación hosting anual</li>
+              <li><span class="check">✓</span> Backups automáticos diarios</li>
+              <li><span class="check">✓</span> Actualizaciones de seguridad</li>
+              <li><span class="check">✓</span> Monitoreo uptime 24/7</li>
+              <li><span class="check">✓</span> 2 cambios de contenido/mes</li>
+            </ul>
+            <a href="#contact" class="service-btn">Cotizar este servicio →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PROCESO ═══════════ -->
+    <section id="process">
+      <div class="container">
+        <div class="process-header reveal">
+          <div class="section-tag center-tag">Cómo Trabajamos</div>
+          <h2>Tu web lista en 4 pasos simples</h2>
+          <p class="section-desc">
+            Un proceso claro donde siempre sabes qué está pasando con tu
+            proyecto.
+          </p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step reveal reveal-delay-1">
+            <div class="step-num">💬</div>
+            <h3>Briefing</h3>
+            <p>
+              Conversamos sobre tu negocio y objetivos. Te pedimos toda la info
+              necesaria.
+            </p>
+          </div>
+          <div class="process-step reveal reveal-delay-2">
+            <div class="step-num">🎨</div>
+            <h3>Diseño</h3>
+            <p>Creamos el diseño en Figma y te lo mostramos para aprobación.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3">
+            <div class="step-num">⚙️</div>
+            <h3>Desarrollo</h3>
+            <p>Programamos, configuramos hosting, dominio y SSL.</p>
+          </div>
+          <div class="process-step reveal reveal-delay-3">
+            <div class="step-num">🚀</div>
+            <h3>Entrega</h3>
+            <p>Tu web queda publicada con 30 días de soporte incluido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PORTAFOLIO ═══════════ -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="portfolio-header reveal">
+          <div>
+            <div class="section-tag">Portafolio</div>
+            <h2>Proyectos que generan resultados</h2>
+          </div>
+          <a href="portfolio.html" class="btn-outline">Ver todos →</a>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-card reveal reveal-delay-1">
+            <div class="portfolio-thumb pt-1">
+              <div class="portfolio-browser">
+                <div class="browser-bar">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="browser-content">
+                  <div class="browser-hero-block"></div>
+                  <div class="bl w-full"></div>
+                  <div class="bl w-70"></div>
+                  <div
+                    class="bl"
+                    style="width: 50%; background: rgba(45, 127, 249, 0.5)"
+                  ></div>
+                </div>
+              </div>
+              <div class="portfolio-overlay"><span>Ver proyecto</span></div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Clínica Dental Sonrisa</h3>
+              <span>Lima, Perú</span>
+              <div class="portfolio-tag">Landing Page</div>
+            </div>
+          </div>
+          <div class="portfolio-card reveal reveal-delay-2">
+            <div class="portfolio-thumb pt-2">
+              <div class="portfolio-browser">
+                <div class="browser-bar">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="browser-content">
+                  <div class="browser-hero-block"></div>
+                  <div class="bl w-full"></div>
+                  <div class="bl w-70"></div>
+                </div>
+              </div>
+              <div class="portfolio-overlay"><span>Ver proyecto</span></div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Constructora Andina SAC</h3>
+              <span>Arequipa, Perú</span>
+              <div class="portfolio-tag">Web Corporativa</div>
+            </div>
+          </div>
+          <div class="portfolio-card reveal reveal-delay-3">
+            <div class="portfolio-thumb pt-3">
+              <div class="portfolio-browser">
+                <div class="browser-bar">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="browser-content">
+                  <div class="browser-hero-block"></div>
+                  <div class="bl w-full"></div>
+                  <div
+                    class="bl"
+                    style="width: 50%; background: rgba(45, 127, 249, 0.5)"
+                  ></div>
+                </div>
+              </div>
+              <div class="portfolio-overlay"><span>Ver proyecto</span></div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Coach Empresarial</h3>
+              <span>Lima, Perú</span>
+              <div class="portfolio-tag">Landing Page</div>
+            </div>
+          </div>
+          <div class="portfolio-card reveal reveal-delay-1">
+            <div class="portfolio-thumb pt-4">
+              <div class="portfolio-browser">
+                <div class="browser-bar">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="browser-content">
+                  <div class="browser-hero-block"></div>
+                  <div class="bl w-full"></div>
+                  <div class="bl w-70"></div>
+                </div>
+              </div>
+              <div class="portfolio-overlay"><span>Ver proyecto</span></div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Restaurante El Pacífico</h3>
+              <span>Miraflores, Lima</span>
+              <div class="portfolio-tag">Web Corporativa</div>
+            </div>
+          </div>
+          <div class="portfolio-card reveal reveal-delay-2">
+            <div class="portfolio-thumb pt-5">
+              <div class="portfolio-browser">
+                <div class="browser-bar">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="browser-content">
+                  <div class="browser-hero-block"></div>
+                  <div class="bl w-full"></div>
+                  <div class="bl w-70"></div>
+                </div>
+              </div>
+              <div class="portfolio-overlay"><span>Ver proyecto</span></div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Abogados Mendoza &amp; Asoc.</h3>
+              <span>San Isidro, Lima</span>
+              <div class="portfolio-tag">Web Corporativa</div>
+            </div>
+          </div>
+          <div class="portfolio-card reveal reveal-delay-3">
+            <div class="portfolio-thumb pt-6">
+              <div class="portfolio-browser">
+                <div class="browser-bar">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="browser-content">
+                  <div class="browser-hero-block"></div>
+                  <div class="bl w-full"></div>
+                  <div
+                    class="bl"
+                    style="width: 70%; background: rgba(45, 127, 249, 0.5)"
+                  ></div>
+                </div>
+              </div>
+              <div class="portfolio-overlay"><span>Ver proyecto</span></div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Tienda Moda Perú</h3>
+              <span>Trujillo, Perú</span>
+              <div class="portfolio-tag">Landing Page</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRECIOS ═══════════ -->
+    <section id="pricing">
+      <div class="container">
+        <div class="pricing-header reveal">
+          <div class="section-tag center-tag">Planes y Precios</div>
+          <h2>Inversión clara, sin sorpresas</h2>
+          <p class="section-desc">
+            Precios en soles peruanos. Hosting incluido el primer año en todos
+            los planes.
+          </p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card reveal reveal-delay-1">
+            <div class="pricing-name">Landing Page</div>
+            <div class="pricing-desc">Para campañas y lanzamientos</div>
+            <div class="pricing-price">
+              <div class="price-amount">S/. 600 <small>setup</small></div>
+              <div class="price-renewal">+ S/. 250/año hosting (2do año)</div>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> 1 página de alta conversión</li>
+              <li><span class="check">✓</span> Diseño personalizado</li>
+              <li><span class="check">✓</span> Mobile optimizado</li>
+              <li><span class="check">✓</span> Google Analytics incluido</li>
+              <li><span class="check">✓</span> Hosting gestionado 1 año</li>
+              <li><span class="check">✓</span> SSL + dominio incluido</li>
+              <li><span class="check">✓</span> Entrega 7–10 días</li>
+            </ul>
+            <a href="#contact" class="btn-plan btn-plan-outline"
+              >Empezar ahora</a
+            >
+          </div>
+          <div class="pricing-card popular reveal reveal-delay-2">
+            <div class="popular-badge">⭐ Más popular</div>
+            <div class="pricing-name">Web Corporativa</div>
+            <div class="pricing-desc">Presencia digital completa</div>
+            <div class="pricing-price">
+              <div class="price-amount">S/. 1,800 <small>setup</small></div>
+              <div class="price-renewal">+ S/. 400/año hosting (2do año)</div>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> Hasta 6 secciones</li>
+              <li><span class="check">✓</span> Diseño premium a medida</li>
+              <li><span class="check">✓</span> Mobile y desktop</li>
+              <li><span class="check">✓</span> SEO básico on-page</li>
+              <li><span class="check">✓</span> Redes sociales integradas</li>
+              <li><span class="check">✓</span> Hosting gestionado 1 año</li>
+              <li><span class="check">✓</span> SSL + dominio incluido</li>
+              <li><span class="check">✓</span> Entrega 15–20 días</li>
+            </ul>
+            <a href="#contact" class="btn-plan btn-plan-solid"
+              >Quiero este plan</a
+            >
+          </div>
+          <div class="pricing-card reveal reveal-delay-3">
+            <div class="pricing-name">Mantenimiento</div>
+            <div class="pricing-desc">Para webs existentes</div>
+            <div class="pricing-price">
+              <div class="price-amount">S/. 150 <small>/mes</small></div>
+              <div class="price-renewal">Sin contrato mínimo</div>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> Renovación hosting</li>
+              <li><span class="check">✓</span> Backups diarios</li>
+              <li><span class="check">✓</span> Actualizaciones seguridad</li>
+              <li><span class="check">✓</span> Monitoreo 24/7</li>
+              <li><span class="check">✓</span> Soporte prioritario</li>
+              <li><span class="check">✓</span> 2 cambios/mes</li>
+            </ul>
+            <a href="#contact" class="btn-plan btn-plan-outline"
+              >Contratar soporte</a
+            >
+          </div>
+        </div>
+        <p class="pricing-note reveal">
+          ¿Necesitas algo personalizado? <a href="#contact">Escríbenos →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════ TESTIMONIOS ═══════════ -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="testimonials-header reveal">
+          <div class="section-tag center-tag">Testimonios</div>
+          <h2>Lo que dicen nuestros clientes</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testi-card reveal reveal-delay-1">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "WEBLIFT me hizo una landing page y desde el primer mes mis
+              anuncios de Instagram generaron el doble de consultas. El proceso
+              fue súper simple."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">MC</div>
+              <div class="testi-name">
+                <strong>María Castillo</strong><span>Clínica Dental, Lima</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal reveal-delay-2">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "No tuve que preocuparme por nada técnico. En 18 días tenía mi web
+              corporativa funcionando perfectamente con todo incluido."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">JR</div>
+              <div class="testi-name">
+                <strong>Jorge Ramírez</strong
+                ><span>Constructora Andina, Arequipa</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal reveal-delay-3">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">
+              "Contraté la landing para mi curso online. El diseño es moderno,
+              carga rapidísimo y el formulario funciona perfecto. Muy
+              recomendados."
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">AL</div>
+              <div class="testi-name">
+                <strong>Ana Lucía Quispe</strong
+                ><span>Coach Empresarial, Lima</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CTA ═══════════ -->
+    <section id="cta">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div class="section-tag center-tag cta-tag">Empecemos</div>
+          <h2>Tu negocio merece estar en internet — y hacerlo bien</h2>
+          <p>
+            Cotización gratuita en menos de 24 horas. Sin compromiso, sin letra
+            chica.
+          </p>
+          <div class="cta-btns">
+            <a href="#contact" class="btn-primary"
+              >Quiero mi cotización gratis</a
+            >
+            <a
+              href="https://wa.me/51999999999?text=Hola%20WEBLIFT"
+              target="_blank"
+              class="btn-secondary"
+              >💬 WhatsApp directo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACTO ═══════════ -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="section-tag">Contacto</div>
+            <h2>Hablemos de tu proyecto</h2>
+            <p>
+              Cuéntanos sobre tu negocio y te enviamos una propuesta en menos de
+              24 horas.
+            </p>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-item-icon">📧</div>
+                <div class="contact-item-text">
+                  <strong>Correo</strong><span>hola@weblift.studio</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">💬</div>
+                <div class="contact-item-text">
+                  <strong>WhatsApp</strong><span>+51 999 999 999</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
+                <div class="contact-item-text">
+                  <strong>Ubicación</strong
+                  ><span>Lima, Perú — Atendemos todo el país</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon">🕐</div>
+                <div class="contact-item-text">
+                  <strong>Horario</strong
+                  ><span>Lunes a Viernes, 9am – 6pm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper reveal reveal-delay-2">
+            <div class="form-header">
+              <h3>Solicita tu cotización</h3>
+              <p>Te respondemos en menos de 24 horas hábiles.</p>
+            </div>
+
+            <!-- Aviso si no está logueado -->
+            <div
+              class="login-required-notice"
+              id="loginNotice"
+              style="display: none"
+            >
+              <p>🔒 Para enviar tu cotización necesitas una cuenta gratuita.</p>
+              <div class="notice-btns">
+                <a
+                  href="login.html?redirect=home.html%23contact"
+                  class="btn-outline"
+                  style="font-size: 0.85rem; padding: 0.6rem 1.25rem"
+                  >Iniciar sesión</a
+                >
+                <a
+                  href="register.html?redirect=home.html%23contact"
+                  class="btn-primary"
+                  style="font-size: 0.85rem; padding: 0.6rem 1.25rem"
+                  >Crear cuenta gratis</a
+                >
+              </div>
+            </div>
+
+            <!-- Saludo personalizado -->
+            <div
+              id="userGreet"
+              style="
+                display: none;
+                background: rgba(45, 127, 249, 0.06);
+                border: 1px solid rgba(45, 127, 249, 0.15);
+                border-radius: 10px;
+                padding: 0.75rem 1rem;
+                font-size: 0.875rem;
+                color: #2d5fa0;
+                margin-bottom: 1.25rem;
+              "
+            ></div>
+
+            <!-- Formulario -->
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre completo *</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                  <span class="field-error" id="error-nombre"></span>
+                </div>
+                <div class="form-group">
+                  <label for="empresa">Empresa / Negocio</label>
+                  <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    placeholder="Tu negocio"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Correo electrónico *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tucorreo@ejemplo.com"
+                    required
+                  />
+                  <span class="field-error" id="error-email"></span>
+                </div>
+                <div class="form-group">
+                  <label for="telefono">WhatsApp / Teléfono</label>
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="+51 999 999 999"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="servicio">¿Qué servicio te interesa? *</label>
+                <select id="servicio" name="servicio" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="Landing Page">Landing Page</option>
+                  <option value="Página Web Corporativa">
+                    Página Web Corporativa
+                  </option>
+                  <option value="Mantenimiento / Soporte">
+                    Mantenimiento / Soporte
+                  </option>
+                  <option value="No sé aún, quiero asesoría">
+                    No sé aún, quiero asesoría
+                  </option>
+                </select>
+                <span class="field-error" id="error-servicio"></span>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">Cuéntanos sobre tu proyecto *</label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="¿Qué hace tu negocio? ¿Qué quieres lograr con tu web?"
+                  required
+                ></textarea>
+                <span class="field-error" id="error-mensaje"></span>
+              </div>
+              <div class="form-success" id="formSuccess">
+                ✅ ¡Cotización enviada! Te contactamos en menos de 24 horas.
+              </div>
+              <button type="submit" class="btn-submit" id="btnSubmit">
+                <span>Enviar cotización</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="../index.html" class="nav-logo footer-logo">
+              <img
+                src="../assets/images/logo.png"
+                alt="WEBLIFT"
+                class="logo-img"
+                style="height: 28px"
+              />
+              WEB<span>LIFT</span>
+            </a>
+            <p>
+              Agencia peruana de diseño y desarrollo web. Hosting incluido en
+              cada proyecto.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+              <li><a href="services.html">Landing Pages</a></li>
+              <li><a href="services.html">Webs Corporativas</a></li>
+              <li><a href="services.html">Mantenimiento</a></li>
+              <li><a href="#contact">Cotización gratis</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Páginas</h4>
+            <ul>
+              <li><a href="#about">Nosotros</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="portfolio.html">Portafolio</a></li>
+              <li><a href="pricing.html">Precios</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contacto</h4>
+            <ul>
+              <li>
+                <a href="mailto:hola@weblift.studio">hola@weblift.studio</a>
+              </li>
+              <li>
+                <a href="https://wa.me/51999999999" target="_blank">WhatsApp</a>
+              </li>
+              <li><a href="#" target="_blank">Instagram</a></li>
+              <li><a href="#" target="_blank">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © 2026 WEBLIFT Studio. Todos los derechos reservados. Lima, Perú.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn">IG</a>
+            <a href="#" class="social-btn">in</a>
+            <a href="https://wa.me/51999999999" class="social-btn">WA</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../js/config/firebase-config.js"></script>
+    <script src="../js/services/auth-service.js"></script>
+    <script src="../js/services/cotizacion-service.js"></script>
+    <script src="../js/controllers/contact-controller.js"></script>
+    <!-- UI — en este orden exacto -->
+    <script src="../js/ui/intro.js"></script>
+    <script src="../js/ui/navbar.js"></script>
+    <script src="../js/ui/animations.js"></script>
+    <script src="../js/ui/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+/* ═══════════════════════════════════════════════
+   WEBLIFT Studio — navbar.css
+═══════════════════════════════════════════════ */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 5%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    background 0.4s,
+    backdrop-filter 0.4s,
+    box-shadow 0.4s;
+}
+
+nav.scrolled {
+  background: rgba(0, 14, 34, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Logo */
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-logo span {
+  color: var(--blue);
+}
+
+.logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+.nav-links a {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: white;
+}
+.nav-links a.active {
+  color: white;
+}
+
+/* Auth buttons en navbar */
+.nav-auth {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.nav-btn-login {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+.nav-btn-login:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: white;
+}
+
+.nav-btn-cta {
+  background: var(--whatsapp-green);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.nav-btn-cta:hover {
+  background: var(--whatsapp-green);
+  transform: translateY(-1px);
+  border: 1px solid white;
+}
+
+/* Usuario logueado en navbar */
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  transition: border-color 0.2s;
+}
+.nav-user:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.nav-user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  font-family: var(--font-display);
+}
+.nav-user-name {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Dropdown del usuario */
+.nav-user-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 5%;
+  background: rgba(0, 14, 34, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  min-width: 180px;
+  display: none;
+  backdrop-filter: blur(20px);
+}
+.nav-user-dropdown.open {
+  display: block;
+}
+.nav-user-dropdown a,
+.nav-user-dropdown button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-light);
+  transition:
+    background 0.2s,
+    color 0.2s;
+  text-align: left;
+}
+.nav-user-dropdown a:hover,
+.nav-user-dropdown button:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+}
+.nav-user-dropdown .logout-btn {
+  color: #ff6b6b;
+}
+.nav-user-dropdown .logout-btn:hover {
+  background: rgba(255, 107, 107, 0.1);
+}
+
+/* Hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 14, 34, 0.98);
+    padding: 2rem 5%;
+    gap: 1.5rem;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav-auth {
+    display: none;
+  }
+  .nav-links .nav-auth {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* ── Navbar en páginas de auth (login/register) ── */
+/* Solo muestra el logo, sin links ni hamburguesa */
+nav.auth-nav .nav-links {
+  display: none !important;
+}
+nav.auth-nav .nav-hamburger {
+  display: none !important;
+}
+nav.auth-nav {
+  background: rgba(0, 14, 34, 0.98) !important;
+  backdrop-filter: blur(20px);
+}
